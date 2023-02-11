@@ -21,7 +21,7 @@ const App = () => {
 
   const generate = async (prompt) => {
     updateLoading(true);
-    const result = await axios.get(`http://127.0.0.1:8000/?prompt=${prompt}`);
+    const result = await axios.get(`https://backend-app-v1-stayamazed.vercel.app/?prompt=${prompt}`);
     updateImage(result.data.output[0]);
     updateLoading(false);
   };
